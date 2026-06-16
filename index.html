@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>KJY · Portfolio</title>
+    <meta name="description" content="개발자 KJY의 포트폴리오"/>
+    <meta name="format-detection" content="telephone=no, email=no, address=no"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+</head>
+<body>
+
+<!-- ===== Header / Nav ===== -->
+<header class="site-header" id="top">
+    <nav class="nav container">
+        <a class="brand" href="#top">KJY<span>.</span></a>
+        <button class="nav-toggle" aria-label="메뉴 열기">☰</button>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a class="nav-github" href="https://github.com/kim541563-code" target="_blank" rel="noopener" aria-label="GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.34-3.369-1.34-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.742 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+            </a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+        <div class="container hero-inner">
+            <p class="hero-eyebrow reveal">안녕하세요 👋</p>
+            <h1 class="hero-title reveal">
+                풀스택<br/>
+                <span class="grad">개발자 KJY</span> 입니다
+            </h1>
+            <p class="hero-sub reveal">
+                Spring Boot · JPA · 데이터베이스를 기반으로 견고한 웹 서비스를 만듭니다.
+                문제를 끝까지 파고드는 것을 좋아합니다.
+            </p>
+            <div class="hero-actions reveal">
+                <a class="btn btn-primary" href="#projects">프로젝트 보기</a>
+                <a class="btn btn-ghost" href="#contact">연락하기</a>
+            </div>
+        </div>
+        <div class="hero-glow"></div>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section class="section" id="about">
+        <div class="container">
+            <p class="section-kicker reveal">About</p>
+            <h2 class="section-title reveal">저를 소개합니다</h2>
+            <div class="about-grid">
+                <div class="about-text reveal" id="aboutText">
+                    <p class="type-line">사용자가 마주하는 화면 뒤에서 안정적으로 동작하는 시스템을 설계하고 구현하는 데 관심이 많습니다. 깔끔한 코드와 명확한 도메인 모델, 그리고 테스트를 중요하게 생각합니다.</p>
+                    <p class="type-line">새로운 기술을 학습하고 작은 단위로 빠르게 만들어보며 성장하고 있습니다. 이 포트폴리오 사이트 역시 Spring Boot로 직접 만들었습니다.</p>
+                </div>
+                <ul class="about-facts">
+                    <li class="reveal"><span>📍 Location</span><strong>Suwon, Korea</strong></li>
+                    <li class="reveal"><span>🎓 Focus</span><strong>Backend / Web</strong></li>
+                    <li class="reveal"><span>⚙️ Stack</span><strong>Java · Spring</strong></li>
+                    <li class="reveal"><span>✉️ Email</span><strong>kim541563@gmail.com</strong></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Skills ===== -->
+    <section class="section section-alt" id="skills">
+        <div class="container">
+            <p class="section-kicker reveal">Skills</p>
+            <h2 class="section-title reveal">사용하는 기술</h2>
+            <div class="skills-grid">
+                <div class="skill-card reveal"><span class="skill-emoji">☕</span><h3>Java</h3><p>객체지향 설계, 최신 Java 문법</p></div>
+                <div class="skill-card reveal"><span class="skill-emoji">🍃</span><h3>Spring Boot</h3><p>MVC, Security, REST API</p></div>
+                <div class="skill-card reveal"><span class="skill-emoji">🗄️</span><h3>JPA / DB</h3><p>JPA, H2, 관계형 모델링</p></div>
+                <div class="skill-card reveal"><span class="skill-emoji">🧪</span><h3>Test</h3><p>JUnit, 통합 테스트</p></div>
+                <div class="skill-card reveal"><span class="skill-emoji">🔧</span><h3>Tools</h3><p>Git, Gradle, IntelliJ</p></div>
+                <div class="skill-card reveal"><span class="skill-emoji">🎨</span><h3>Frontend</h3><p>HTML, CSS, Thymeleaf</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Projects ===== -->
+    <section class="section" id="projects">
+        <div class="container">
+            <p class="section-kicker reveal">Projects</p>
+            <h2 class="section-title reveal">작업한 프로젝트</h2>
+
+            <div class="projects-grid">
+                <article class="project-card reveal" th:each="p : ${projects}"
+                         th:data-title="${p.title}"
+                         th:data-summary="${p.summary}"
+                         th:data-stars="${p.stars}"
+                         th:data-updated="${p.updatedAt}"
+                         th:data-repo-url="${p.repoUrl}">
+                    <div class="project-emoji" th:text="${p.emoji}">📦</div>
+                    <h3 th:text="${p.title}">프로젝트 제목</h3>
+                    <p class="project-desc" th:text="${p.description}">설명</p>
+                    <div class="project-tags">
+                        <span class="tag" th:each="t : ${p.tags}" th:text="${t}">tag</span>
+                    </div>
+                </article>
+            </div>
+            <p class="project-hint reveal">카드를 클릭하면 GitHub 내용을 요약해서 보여줍니다.</p>
+        </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section class="section section-alt" id="contact">
+        <div class="container contact-wrap">
+            <p class="section-kicker reveal">Contact</p>
+            <h2 class="section-title reveal">함께 일하고싶습니다.</h2>
+            <p class="contact-lead reveal">아래 연락처로 언제든지 연락 주세요.</p>
+
+            <div class="alert alert-success reveal" th:if="${contactSuccess}" th:text="${contactSuccess}"></div>
+            <div class="alert alert-error reveal" th:if="${contactError}" th:text="${contactError}"></div>
+
+            <div class="contact-grid">
+                <ul class="contact-info reveal">
+                    <li>
+                        <span class="contact-icon">✉️</span>
+                        <div>
+                            <span class="contact-label">Email</span>
+                            <span>kim541563@gmail.com</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contact-icon">📞</span>
+                        <div>
+                            <span class="contact-label">Phone</span>
+                            <span>010-4137-7846</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contact-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.34-3.369-1.34-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.742 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                        </span>
+                        <div>
+                            <span class="contact-label">GitHub</span>
+                            <a href="https://github.com/kim541563-code" target="_blank" rel="noopener">github.com/kim541563-code</a>
+                        </div>
+                    </li>
+                </ul>
+
+                <form class="contact-form reveal" th:action="@{/contact}" method="post">
+                    <label>
+                        이름
+                        <input type="text" name="name" placeholder="홍길동" required/>
+                    </label>
+                    <label>
+                        이메일
+                        <input type="email" name="email" placeholder="you@example.com" required/>
+                    </label>
+                    <label>
+                        메시지
+                        <textarea name="content" rows="5" placeholder="전하고 싶은 말을 적어주세요." required></textarea>
+                    </label>
+                    <button type="submit" class="btn btn-primary">메시지 보내기</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- ===== Footer ===== -->
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <p>© <span th:text="${#dates.year(#dates.createNow())}">2026</span> KJY. Built with Spring Boot.</p>
+        <div class="footer-links">
+            <a href="#top">맨 위로 ↑</a>
+            <a th:href="@{/admin/messages}">Admin</a>
+        </div>
+    </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="맨 위로">↑</button>
+
+<!-- ===== Project Summary Modal ===== -->
+<div class="modal-overlay" id="projectModal" aria-hidden="true">
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="projectModalTitle">
+        <button class="modal-close" id="projectModalClose" aria-label="닫기">✕</button>
+        <h3 class="modal-title" id="projectModalTitle"></h3>
+        <p class="modal-meta"></p>
+        <p class="modal-summary"></p>
+        <a class="btn btn-primary modal-link" target="_blank" rel="noopener">GitHub에서 보기 →</a>
+    </div>
+</div>
+
+<script th:src="@{/js/main.js}"></script>
+</body>
+</html>
